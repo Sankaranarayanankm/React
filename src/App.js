@@ -10,7 +10,7 @@ function App() {
     },
      {
       id:"e2",
-      title:"what ever",
+      title:"Laptop",
       amount:400,
       date:new Date(2023,6,23),
       locationOfExpenditure:"Eranakulam"
