@@ -29,6 +29,7 @@ const ExpenseForm = () => {
         value={state.amount}
         onChange={changeHandler}
       />
+      <button>X</button>
     </form>
   )
 }
