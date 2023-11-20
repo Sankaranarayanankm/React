@@ -34,13 +34,13 @@ const App=()=> {
   ];
 
   const data=expense.map((value)=>{
-   return <ExpenseItem title={value.title} amount={value.amount} date={value.date} loc={value.locationOfExpenditure}/>
+   return <ExpenseItem  key={value.id} id={value.id} title={value.title} amount={value.amount} date={value.date} loc={value.locationOfExpenditure}/>
   });
   return (
-    <Card >
+    <card >
       <h2>Let's get started!</h2>
       {data}
-    </Card>
+    </card>
   );
 }
 
