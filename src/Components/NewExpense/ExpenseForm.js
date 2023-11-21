@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
@@ -13,16 +13,25 @@ const ExpenseForm = () => {
       return {
         ...old,
         [name]: value,
+        // when we create date use 
+        // date: new Date(EnteredDate)
       };
     });
   }
   function submitHandler(event) {
     event.preventDefault();
-    console.log(
-      "title: " + userInput.title,
-      "amount:" + userInput.amount,
-      "date:" + userInput.date
-    );
+    const expenseData={
+      title:userInput.title,
+      amount:userInput.amount,
+      date:userInput.date
+    }
+    console.log(expenseData);
+    // reseting the values of the form 
+    setUserInput({
+      title:"",
+      amount:"",
+      date:""
+    })
   }
   return (
     <form onSubmit={submitHandler}>
