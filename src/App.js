@@ -1,8 +1,10 @@
 import ExpenseItem from "./Components/Expenses/ExpenseItem";
 import Card from "./Components/UI/Card";
 import NewExpense from "./Components/NewExpense/NewExpense";
+import { useState } from "react";
 
 const App=()=> {
+  const [state,setState]=useState([]);
   const expense=[
     {
       id:"e1",
@@ -33,13 +35,18 @@ const App=()=> {
       locationOfExpenditure:"Kollam"
     },
   ];
+  const addExpenseHandler=(expense)=>{
+    console.log(expense);
+  }
+    
+  
 
   const data=expense.map((value)=>{
    return <ExpenseItem  key={value.id} id={value.id} title={value.title} amount={value.amount} date={value.date} loc={value.locationOfExpenditure}/>
   });
   return (
     <card >
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       {data}
     </card>
     
