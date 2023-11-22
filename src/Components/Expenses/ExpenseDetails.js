@@ -2,7 +2,6 @@ import React from 'react'
 import "../Expenses/ExpenseDetails.css";
 
 const ExpenseDetails=(props)=> {
-  console.log(props)
   return (
     <div>
       <h2 className="expense-details__description">{props.title}</h2>
