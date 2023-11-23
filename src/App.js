@@ -3,7 +3,7 @@ import Card from "./Components/UI/Card";
 import NewExpense from "./Components/NewExpense/NewExpense";
 import { useState } from "react";
 import ExpenseFilter from "./Components/FilterMethod/ExpenseFilter";
-
+import ExpensesChart from "./Components/Expenses/ExpensesChart";
 const dummyExpense = [
   {
     id: "e1",
@@ -56,6 +56,8 @@ const App = () => {
   return (
     <div>
       <NewExpense   onAddExpense={addExpenseHandler} />
+      <ExpensesChart expense={expense}/>
+
       <ExpenseFilter items={expense} onFilter={addFilterHandler} />
       {filteredExpense.length > 0
         ? filteredExpense.map((value) => (
