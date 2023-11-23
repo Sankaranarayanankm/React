@@ -53,17 +53,9 @@ const App = () => {
 
     setFilteredExpense(filteredItems);
   }
-<<<<<<< HEAD
-=======
-  console.log(filteredExpense.length)
-  if(filteredExpense.length==0){
-    const displayExpense={}
-  }
->>>>>>> b40069c (added some  conditionals)
-
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
+      <NewExpense   onAddExpense={addExpenseHandler} />
       <ExpenseFilter items={expense} onFilter={addFilterHandler} />
       {filteredExpense.length > 0
         ? filteredExpense.map((value) => (
@@ -82,10 +74,7 @@ const App = () => {
               date={value.date}
             />
           ))}
-<<<<<<< HEAD
-=======
           {expense.length==1 && <p>Only single expense addd more</p>}
->>>>>>> b40069c (added some  conditionals)
     </div>
   );
 };
