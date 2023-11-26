@@ -8,7 +8,7 @@ const List = () => {
   const userAddHandler = (data) => {
     setUserList((old) => [data, ...old]);
   };
-
+console.log(userList)
   return (
     <div className="list">
       <Form userAdd={userAddHandler} />
@@ -16,7 +16,7 @@ const List = () => {
         {userList.map((user, index) => {
           return (
             <li className="lists" key={index}>
-              {user.name}({user.age}Years old)
+              {user.name}({user.age}Years old) from {user.college}
             </li>
           );
         })}
